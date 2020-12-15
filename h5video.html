@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video</title>
+    <script src="js/jq.js"></script>
+</head>
+<body>
+    <div id="video">
+        <video id="videoCon" controls src="https://blz-videos.nosdn.127.net/1/OverWatch/AnimatedShots/Overwatch_AnimatedShot_Winston_Recall.mp4"></video>
+        <select name="beisu" id="sltRate">
+            <option value="1">1</option>
+            <option value="1.5">1.5</option>
+            <option value="2">2</option>
+            <option value="10">10</option>
+        </select>
+    </div>
+
+
+    <script>
+        $(function(){
+            $("#sltRate").change(function(){
+                var curVideo = $("#videoCon")[0];
+                curVideo.playbackRate=$(this).val();
+                curVideo.play();
+            })
+        })
+    </script>
+</body>
+</html>
